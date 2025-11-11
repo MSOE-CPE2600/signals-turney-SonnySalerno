@@ -1,19 +1,24 @@
-/**
- * @file signal_segfault.c
- * @brief Program that dereferences a null pointer causing a segmentation fault
- */
-
-/**
- * Modified by:
- * 
- * Brief summary of modifications:
- */
-
-
+/*******************************************************************
+* Filename: signal_segfault.c
+* Description: demonstrates how a seg fault is generated and handled
+* Author: Sonny Salerno
+* Date: 11/10/2025
+* Note: make clean, make, ./signal_segfault
+*********************************************************************/
 #include <stdio.h>
+#include <signal.h>
+#include <stdlib.h>
+
+void handle_segfault(int sig){
+    printf("Caught signal %d (SIGSEGV): Segmentation fault detected.\n", sig);
+    printf("Exiting safely...\n");
+    exit(1);
+}
 
 int main (int argc, char* argv[]) {
-    // Declare a null pointer
+    // Declare a nusll pointer
+    signal(SIGSEGV, handle_segfault);
+
     int* i = NULL;
 
     // Dereference the null pointer
