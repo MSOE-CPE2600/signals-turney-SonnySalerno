@@ -79,11 +79,11 @@ Uses the `sigaction()` function to register a signal handler for `SIGUSR1`. The 
 ### <ins>Send and Recieve signals</ins>
 **recv_signal:**
 
-    Registers a custom signal handler for `SIGUSR1` using `sigaction()`. Recieve signals that has additional info from `sigqueue()`. When `SIGUSR1` is recieved it prints the `PID` and integer that was attached to the signal.
+Registers a custom signal handler for `SIGUSR1` using `sigaction()`. Recieve signals that has additional info from `sigqueue()`. When `SIGUSR1` is recieved it prints the `PID` and integer that was attached to the signal.
 
 **send_signal:**
 
-    Sends a `SIGUSR1` signal to another process using `sigqueue()`. As well as generates a random int from 1-100 attaches it to the signal using `union sigval`, and sends it to a specific `PID`.
+Sends a `SIGUSR1` signal to another process using `sigqueue()`. As well as generates a random int from 1-100 attaches it to the signal using `union sigval`, and sends it to a specific `PID`.
 
 Compile together with seperate terminals:
 ```
