@@ -54,3 +54,5 @@ signal_alarm
 signal_handler
 signal_segfault
 signal_sigaction
+recv_signal
+send_signal
