@@ -1,6 +1,7 @@
 # Repo for Lab Week 10
 ## Description:
-Use of signals as an inter-process communication 
+Use of signals as an inter process communication. Shows how to register a signal handler as well as how to
+send, suspend, and view pending signals.
 
 ---
 
@@ -27,13 +28,11 @@ make
 ```bash
 ./signal_sigaction
 ```
-
-### Compile together with seperate terminals:
 ```bash
 ./recv_signal
 ```
 ```bash
-./send_signal <pid>
+./send_signal
 ```
 
 ### To compile manually:
@@ -44,8 +43,8 @@ gcc -o exe filename.c
 
 ## How to Run
 
-### Run the program in terminal:
-### Signal Handler:
+### Run the executable in terminal:
+**Signal Handler**
 ```
 ./signal_handler
 ```
@@ -55,10 +54,12 @@ Two (2) ways to send the SIGINT signal to the process:
 
 2.) In another terminal, type 'kill -2 <pid>' or 'kill -SIGINT <pid>'
 
-
-### To quit:
+**Send and Recieve signals**
+Compile together with seperate terminals:
 ```
-> quit
+./recv_signal
 ```
-
+```
+./send_signal <pid>
+```
 ---
