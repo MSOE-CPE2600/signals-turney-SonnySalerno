@@ -1,6 +1,6 @@
 /*******************************************************************
 * Filename: signal_segfault.c
-* Description: demonstrates how a seg fault is generated and handled
+* Description: Shows how a seg fault is generated and handled
 * Author: Sonny Salerno
 * Date: 11/10/2025
 * Note: make clean, make, ./signal_segfault
@@ -12,7 +12,7 @@
 void handle_segfault(int sig){
     printf("Caught signal %d (SIGSEGV): Segmentation fault detected.\n", sig);
     printf("Exiting safely...\n");
-    exit(1);
+    exit(1);    // Exits gracefully after handling
 }
 
 int main (int argc, char* argv[]) {
