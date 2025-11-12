@@ -52,7 +52,7 @@ Two (2) ways to send the SIGINT signal to the process:
 
 1.) Pressing 'Ctrl+C'
 
-2.) In another terminal, type 'kill -2 <pid>' or 'kill -SIGINT <pid>'
+2.) In another terminal, type 'kill -2 pid' or 'kill -SIGINT pid'
 
 **Send and Recieve signals**
 Compile together with seperate terminals:
