@@ -9,6 +9,7 @@
 #include <signal.h>
 #include <stdlib.h>
 
+// Handles segmentation fault when null is dereferenced
 void handle_segfault(int sig){
     printf("Caught signal %d (SIGSEGV): Segmentation fault detected.\n", sig);
     printf("Exiting safely...\n");

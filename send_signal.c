@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
     value.sival_int = rand() % 100 + 1;
 
     printf("Sending SIGUSR1 to process %d with value: %d\n", pid, value.sival_int);
-
+    // Sends SIGUSR1 to the process along with int val
     if (sigqueue(pid, SIGUSR1, value) == -1) {
         perror("sigqueue");
         return 1;

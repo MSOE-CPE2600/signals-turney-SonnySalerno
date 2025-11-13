@@ -10,12 +10,13 @@
 #include <signal.h>
 #include <unistd.h>
 
+// Handles SIGINT signal
 void handle_signal(int sig) {   // This is executed when SIGINT is recv
     printf("\nCaught signal %d (SIGINT)\n", sig);
 }
 
 int main() {
-    // Handler for SIGINT
+    // Register for handler SIGINT
     signal(SIGINT, handle_signal);
 
     // Prints process ID, user can send using kill

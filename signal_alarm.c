@@ -10,11 +10,12 @@
 #include <signal.h>
 #include <unistd.h>
 
+// Handles SIGALRM signal
 void handle_alarm(int sig) {    // This is executed when SIGALRM is recieved
     printf("\nAlarm received!\n");
 }
 int main() {
-    // Handler for SIGALRM
+    // Register for handler SIGALRM
     signal(SIGALRM, handle_alarm);
 
     // Schedules an alarm for 5 seconds
